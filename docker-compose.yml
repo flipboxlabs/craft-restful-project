@@ -1,0 +1,46 @@
+# GETTING STARTED
+# 0. Install Docker for Mac: https://download.docker.com/mac/stable/Docker.dmg
+#
+# 1. Edit your host file and add:
+#       127.0.0.1     local.craft3.com
+#       127.0.0.1     local-api.craft3.com
+# 2. Add environment variables in a .env file in this directory (the root)
+#
+# 3. Start docker containers
+#       docker-compose up -d
+#
+#
+# COMMON COMMANDS
+# 1. Starting docker containers
+#       docker-compose start
+# 2. Stopping docker containers
+#       docker-compose stop
+version: '3'
+services:
+    web:
+        image: flipbox/php:71-amazonlinux-apache
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - '.:/var/www/html/'
+            - '.evo/web/local.conf:/etc/httpd/conf.d/welcome.conf'
+            - '.evo/web/perf.conf:/etc/httpd/conf.d/01-perf.conf'
+        environment:
+            ENVIRONMENT: LOCAL
+            DB_SERVER: db
+            DB_USER: craft
+            DB_PASSWORD: craft
+            DB_DATABASE: craft
+    db:
+        image: 'mysql:5.6'
+        restart: always
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: craft
+            MYSQL_USER: craft
+            MYSQL_PASSWORD: craft
+        volumes:
+            - '.:/app'
