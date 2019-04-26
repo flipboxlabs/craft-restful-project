@@ -25,3 +25,31 @@ See the Craft 3 documentation for [installation](https://docs.craftcms.com/v3/in
 - [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
 - [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
 - [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
+
+
+---
+
+## Getting Started
+
+Start Docker containers, and run Craft CMS setup.
+```
+make craft-setup
+
+-or (for those without Make)-
+
+docker-compose -f docker-compose.yml exec web sh -c "php craft setup"
+```
+For db settings use: mysql, db, 3306, craft, craft, craft, NO-TABLE-PREFIX
+
+
+Install the restful plugin
+
+```
+make install/plugin restful
+
+-or (for those without Make)-
+
+docker-compose -f docker-compose.yml exec web sh -c "php craft install/plugin restful"
+```
+
+Preform a GET request to: https://localhost/api/v1/users 

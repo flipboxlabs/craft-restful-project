@@ -3,12 +3,15 @@
 namespace modules\rest\v1\actions\users;
 
 use craft\elements\User;
-use flipbox\ember\actions\element\ElementIndex;
-use flipbox\ember\helpers\QueryHelper;
+use flipbox\craft\ember\actions\elements\ElementIndex;
+use flipbox\craft\ember\helpers\QueryHelper;
+use modules\rest\v1\actions\DataProviderTrait;
 use yii\db\QueryInterface;
 
 class Index extends ElementIndex
 {
+    use DataProviderTrait;
+
     /**
      * @inheritdoc
      */

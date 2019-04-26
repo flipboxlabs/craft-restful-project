@@ -3,15 +3,13 @@
 namespace modules\rest\v1\controllers;
 
 use craft\helpers\ArrayHelper;
-use flipbox\craft\restful\controllers\traits\TransformFilter;
+use flipbox\craft\restful\filters\transform\TransformFilter;
 use modules\rest\v1\actions\users\Index;
 use modules\rest\v1\actions\users\View;
 use modules\rest\v1\transformers\UserTransformer;
 
 class UsersController extends Controller
 {
-    use TransformFilter;
-
     /**
      * @inheritdoc
      */
@@ -19,9 +17,12 @@ class UsersController extends Controller
     {
         return ArrayHelper::merge(
             parent::behaviors(),
-            $this->transformFilter([
-                'transformer' => UserTransformer::class
-            ])
+            [
+                'transform' => [
+                    'class' => TransformFilter::class,
+                    'transformer' => UserTransformer::class
+                ]
+            ]
         );
     }
 

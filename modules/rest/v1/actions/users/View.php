@@ -2,9 +2,9 @@
 
 namespace modules\rest\v1\actions\users;
 
-use flipbox\ember\actions\element\ElementView;
+use flipbox\craft\ember\actions\elements\ViewElement;
 
-class View extends ElementView
+class View extends ViewElement
 {
     /**
      * @inheritdoc

@@ -4,22 +4,23 @@ namespace modules\rest\v1\transformers;
 
 use craft\elements\User;
 use Flipbox\Transform\Transformers\AbstractTransformer;
-use Flipbox\Transform\Transformers\Traits\ObjectToArray;
 
 class UserTransformer extends AbstractTransformer
 {
-    use ObjectToArray;
-
     /**
-     * @param User $user
+     * @param User $data
      * @return array
      */
-    protected function transform(User $user): array
+    public function __invoke(User $data = null): array
     {
+        if ($data === null) {
+            return [];
+        }
+
         return [
-            'id' => $user->getId(),
-            'firstName' => $user->firstName,
-            'lastName' => $user->lastName
+            'id' => $data->getId(),
+            'firstName' => $data->firstName,
+            'lastName' => $data->lastName
         ];
     }
 }
