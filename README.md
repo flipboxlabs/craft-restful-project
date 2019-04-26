@@ -39,10 +39,10 @@ make craft-setup
 
 docker-compose -f docker-compose.yml exec web sh -c "php craft setup"
 ```
-For db settings use: mysql, db, 3306, craft, craft, craft, NO-TABLE-PREFIX
+*For db settings use: mysql, db, 3306, craft, craft, craft, NO-TABLE-PREFIX*
 
 
-Install the restful plugin
+Install the Restful plugin
 
 ```
 make install/plugin restful
@@ -52,4 +52,4 @@ make install/plugin restful
 docker-compose -f docker-compose.yml exec web sh -c "php craft install/plugin restful"
 ```
 
-Preform a GET request to: https://localhost/api/v1/users 
+Preform a GET request: https://localhost/api/v1/users 
