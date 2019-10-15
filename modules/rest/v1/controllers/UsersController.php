@@ -5,6 +5,7 @@ namespace modules\rest\v1\controllers;
 use craft\helpers\ArrayHelper;
 use flipbox\craft\restful\filters\transform\TransformFilter;
 use modules\rest\v1\actions\users\Create;
+use modules\rest\v1\actions\users\Delete;
 use modules\rest\v1\actions\users\Index;
 use modules\rest\v1\actions\users\Update;
 use modules\rest\v1\actions\users\View;
@@ -39,7 +40,8 @@ class UsersController extends Controller
                 'view' => ['GET'],
                 'index' => ['GET'],
                 'create' => ['POST'],
-                'update' => ['PATCh', 'PUT']
+                'update' => ['PATCH', 'PUT'],
+                'delete' => ['DELETE']
             ]
         );
     }
@@ -63,6 +65,9 @@ class UsersController extends Controller
                 ],
                 'update' => [
                     'class' => Update::class
+                ],
+                'delete' => [
+                    'class' => Delete::class
                 ]
             ]
         );
