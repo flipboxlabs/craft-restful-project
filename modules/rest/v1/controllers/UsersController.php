@@ -4,6 +4,7 @@ namespace modules\rest\v1\controllers;
 
 use craft\helpers\ArrayHelper;
 use flipbox\craft\restful\filters\transform\TransformFilter;
+use modules\rest\v1\actions\users\Create;
 use modules\rest\v1\actions\users\Index;
 use modules\rest\v1\actions\users\View;
 use modules\rest\v1\transformers\UserTransformer;
@@ -35,7 +36,8 @@ class UsersController extends Controller
             parent::verbs(),
             [
                 'view' => ['GET'],
-                'index' => ['GET']
+                'index' => ['GET'],
+                'create' => ['POST']
             ]
         );
     }
@@ -53,6 +55,9 @@ class UsersController extends Controller
                 ],
                 'index' => [
                     'class' => Index::class
+                ],
+                'create' => [
+                    'class' => Create::class
                 ]
             ]
         );

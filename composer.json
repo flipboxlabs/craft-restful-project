@@ -18,11 +18,9 @@
     "docs": "https://craftcms.com/docs",
     "rss": "https://craftcms.com/changelog.rss"
   },
-  "minimum-stability": "rc",
-  "prefer-stable": true,
   "require": {
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0",
+    "vlucas/phpdotenv": "^3.4.0",
     "flipboxfactory/craft-restful": "^2.0"
   },
   "autoload": {
