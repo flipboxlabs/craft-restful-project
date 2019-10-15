@@ -6,6 +6,7 @@ use craft\helpers\ArrayHelper;
 use flipbox\craft\restful\filters\transform\TransformFilter;
 use modules\rest\v1\actions\users\Create;
 use modules\rest\v1\actions\users\Index;
+use modules\rest\v1\actions\users\Update;
 use modules\rest\v1\actions\users\View;
 use modules\rest\v1\transformers\UserTransformer;
 
@@ -37,7 +38,8 @@ class UsersController extends Controller
             [
                 'view' => ['GET'],
                 'index' => ['GET'],
-                'create' => ['POST']
+                'create' => ['POST'],
+                'update' => ['PATCh', 'PUT']
             ]
         );
     }
@@ -58,6 +60,9 @@ class UsersController extends Controller
                 ],
                 'create' => [
                     'class' => Create::class
+                ],
+                'update' => [
+                    'class' => Update::class
                 ]
             ]
         );
