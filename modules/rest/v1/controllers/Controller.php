@@ -6,7 +6,7 @@ use craft\helpers\ArrayHelper;
 use flipbox\craft\restful\filters\Cors;
 use yii\rest\OptionsAction;
 
-class Controller extends \flipbox\craft\rest\Controller
+class Controller extends \flipbox\craft\restful\controllers\AbstractController
 {
     /**
      * @inheritdoc
@@ -18,6 +18,12 @@ class Controller extends \flipbox\craft\rest\Controller
             [
                 'corsFilter' => [
                     'class' => Cors::class
+                ],
+                'authenticator' => [
+                    'except' => [
+                        'options',
+                        'head'
+                    ]
                 ]
             ]
         );

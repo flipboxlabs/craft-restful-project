@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2be180ad2f73293248af2b1e216d1a48",
+    "content-hash": "a80f7f04370813c3d144930f62cbda93",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -909,6 +909,49 @@
             "time": "2019-10-04T16:35:45+00:00"
         },
         {
+            "name": "flipboxfactory/craft-jwt",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flipboxfactory/craft-jwt.git",
+                "reference": "a0b3ced263c35a97fcdeea9c4f88c5c54114c664"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flipboxfactory/craft-jwt/zipball/a0b3ced263c35a97fcdeea9c4f88c5c54114c664",
+                "reference": "a0b3ced263c35a97fcdeea9c4f88c5c54114c664",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0",
+                "lcobucci/jwt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "JWT Authorization",
+                "handle": "jwt",
+                "class": "flipbox\\craft\\jwt\\Jwt",
+                "developer": "Flipbox Digital",
+                "developerUrl": "https://www.flipboxdigital.com",
+                "changelogUrl": "https://raw.githubusercontent.com/flipboxfactory/craft-jwt/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/flipboxfactory/craft-jwt/archive/master.zip",
+                "documentationUrl": "https://github.com/flipboxfactory/craft-jwt/blob/master/README.md",
+                "schemaVersion": "1.0.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "flipbox\\craft\\jwt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "JWT Authorization",
+            "time": "2019-10-15T18:50:38+00:00"
+        },
+        {
             "name": "flipboxfactory/craft-rest",
             "version": "2.0.0",
             "source": {
@@ -1255,6 +1298,61 @@
                 "schema"
             ],
             "time": "2019-09-25T14:49:45+00:00"
+        },
+        {
+            "name": "lcobucci/jwt",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+                "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.5",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/php-invoker": "~1.1",
+                "phpunit/phpunit": "^5.7 || ^7.3",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Otávio Cobucci Oblonczyk",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "time": "2019-05-24T18:30:49+00:00"
         },
         {
             "name": "league/flysystem",
@@ -4175,9 +4273,9 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "RC",
+    "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
