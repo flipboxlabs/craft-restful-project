@@ -29,6 +29,9 @@ See the Craft 3 documentation for [installation](https://docs.craftcms.com/v3/in
 
 ---
 
+## API Endpoint Examples
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b650643ad8412f7a37a4#?env%5BCraft%20Demo%5D=W3sia2V5IjoiaG9zdCIsInZhbHVlIjoiaHR0cHM6Ly9sb2NhbGhvc3QvYXBpIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJ2ZXJzaW9uIiwidmFsdWUiOiJ2MSIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYXV0aG9yaXphdGlvbkJlYXJlckpXVCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJ1c2VySWQiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWV9XQ==)
+
 ## Getting Started
 
 Start Docker containers, and run Craft CMS setup.
